@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LinkTrace — National Police Intelligence & Crime Investigation System</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800&family=Yatra+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Leaflet CSS for GIS Map -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+    />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Leaflet JS & D3.js -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <div class="app-root">
+
+      <!-- ================================================================= -->
+      <!-- VIEW 1: PUBLIC LANDING PAGE (About Us, Features, Contact)         -->
+      <!-- ================================================================= -->
+      <div id="view-landing" class="main-view active">
+        <!-- Landing Topbar -->
+        <header class="landing-navbar">
+          <div class="landing-nav-container">
+            <div class="brand-with-emblem">
+              <!-- Official State Emblem of India (Satyameva Jayate) -->
+              <div class="national-emblem" aria-label="Official State Emblem of India — Satyameva Jayate">
+                <img src="emblem.svg" alt="State Emblem of India — Satyameva Jayate" class="official-emblem-img" />
+              </div>
+              <div class="brand-text-block">
+                <div class="emblem-super-title">GOVERNMENT OF INDIA • MINISTRY OF HOME AFFAIRS</div>
+                <div class="brand-main-title">LINKTRACE</div>
+                <div class="emblem-motto">सत्यमेव जयते • NATIONAL CRIME & CYBER COMMAND</div>
+              </div>
+            </div>
+
+            <!-- Navigation Anchor Links -->
+            <nav class="landing-links">
+              <a href="#section-hero" class="landing-link">Home</a>
+              <a href="#section-about" class="landing-link">About Mission</a>
+              <a href="#section-features" class="landing-link">Capabilities</a>
+              <a href="#section-contact" class="landing-link">State Commands</a>
+            </nav>
+
+            <!-- Officer Portal CTA -->
+            <div class="landing-actions">
+              <button id="btn-goto-login" class="btn btn-accent btn-portal-cta" type="button">
+                <span>👮</span> Officer Access Portal
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <!-- Landing Hero Section (Pan-India Scope) -->
+        <section id="section-hero" class="landing-hero">
+          <div class="hero-container">
+            <div class="hero-badge-pill">
+              <span class="live-dot"></span> CONFIDENTIAL LAW ENFORCEMENT NETWORK • PAN-INDIA JURISDICTION
+            </div>
+            <h1 class="hero-headline">
+              NATIONAL CRIME NEXUS & <span class="highlight-gold">CYBER INTELLIGENCE PLATFORM</span>
+            </h1>
+            <p class="hero-subtext">
+              Unified surveillance and investigation command system empowering State Police Forces, Special Investigation Teams (SIT), and Cyber Crime Cells across all 28 States & 8 Union Territories of India. Designed for CCTNS synergy, CDR telecom tower tracking, and inter-state financial hawala disruption.
+            </p>
+            <div class="hero-cta-group">
+              <button id="btn-hero-login" class="btn btn-accent btn-lg" type="button">
+                <span>🔐</span> Access Command Portal
+              </button>
+              <a href="#section-features" class="btn btn-outline btn-lg">
+                Explore Investigation Modules ➔
+              </a>
+            </div>
+
+            <!-- Authoritative & Realistic Metrics Bar -->
+            <div class="hero-metrics-grid">
+              <div class="metric-box">
+                <div class="metric-number">Pan-India</div>
+                <div class="metric-label">INTER-STATE POLICE COLLABORATION</div>
+                <div class="metric-subdetail">Connecting 28 States & 8 Union Territories</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-number">₹3.4+ Cr</div>
+                <div class="metric-label">CRIME PROCEEDS TRACED (PILOT CASE)</div>
+                <div class="metric-subdetail">Aiming to map ₹1,000+ Cr multi-tier syndicates</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-number">10,000+</div>
+                <div class="metric-label">TARGET & ENTITY NEXUS CAPACITY</div>
+                <div class="metric-subdetail">High-density CDR & Hawala link deduction</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-number">24x7 Real-Time</div>
+                <div class="metric-label">CCTNS & TELECOM CDR RADAR</div>
+                <div class="metric-subdetail">Zero-latency inter-state police dispatch</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: About Us (Pan-India Mandate) -->
+        <section id="section-about" class="landing-section">
+          <div class="section-container">
+            <div class="section-tag">NATIONAL LAW ENFORCEMENT MANDATE</div>
+            <h2 class="section-title">ABOUT LINKTRACE INTELLIGENCE SYSTEM</h2>
+            <p class="section-subtitle">Bridging intelligence silos across State Police Headquarters, Central Investigative Agencies, and CCTNS networks throughout India.</p>
+
+            <div class="about-grid">
+              <div class="about-card">
+                <div class="about-icon">🏛️</div>
+                <h3>State Emblem & National Mandate</h3>
+                <p>Operating with the constitutional motto of <strong>सत्यमेव जयते (Truth Alone Triumphs)</strong>, LinkTrace delivers evidence-grade dossier linking compliant with the Bharatiya Nyaya Sanhita (BNS), CrPC, and IT Act across all Indian courts.</p>
+              </div>
+              <div class="about-card">
+                <div class="about-icon">🇮🇳</div>
+                <h3>Pan-India Inter-State Synergy</h3>
+                <p>Breaks geographical boundaries by connecting armed robbery syndicates in Northern States with chop-shops in Western India and hawala cash-out rings across Southern and Eastern gold hubs.</p>
+              </div>
+              <div class="about-card">
+                <div class="about-icon">⚡</div>
+                <h3>Massive Scale Link Analytics</h3>
+                <p>Eliminates thousands of hours of manual whiteboard diagramming by automatically deducing degrees of separation, telecom tower co-location, and layered mule bank accounts within milliseconds.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Capabilities & Features -->
+        <section id="section-features" class="landing-section bg-alt">
+          <div class="section-container">
+            <div class="section-tag">CORE INVESTIGATION CAPABILITIES</div>
+            <h2 class="section-title">ENGINEERED FOR MODERN CRIME BRANCHES</h2>
+            <p class="section-subtitle">Tactical surveillance and investigative modules designed to dismantle organized criminal gangs nationwide.</p>
+
+            <div class="features-grid">
+              <div class="feature-card">
+                <div class="feature-card-header">
+                  <span class="feature-icon">🕸️</span>
+                  <h3>D3.js Pan-India Nexus Graph</h3>
+                </div>
+                <p>Interactive force-directed graph with physics simulation. Select any two suspects across different states to instantly illuminate the shortest criminal nexus route and degrees of separation.</p>
+                <div class="feature-tag">Degrees of Separation • Shortest Path Algorithm</div>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-card-header">
+                  <span class="feature-icon">🗺️</span>
+                  <h3>National GIS Radar & Tower Mapping</h3>
+                </div>
+                <p>OpenStreetMap-powered nationwide GIS map with 1.2km cellular tower coverage radars, suspect hideouts, state police command hubs, and vehicle last-seen coordinates.</p>
+                <div class="feature-tag">Pan-India Coordinates • Cell Radius Radars</div>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-card-header">
+                  <span class="feature-icon">💸</span>
+                  <h3>Financial Hawala & UPI Ledger</h3>
+                </div>
+                <p>Chronological transaction flow tracking layered UPI tranches, rented mule bank accounts, and physical cash deliveries from North India to Mumbai & Surat gold bazaars.</p>
+                <div class="feature-tag">Mule Accounts • Layered UPI Trails</div>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-card-header">
+                  <span class="feature-icon">🤖</span>
+                  <h3>AI Detective Case Analyst</h3>
+                </div>
+                <p>Built-in heuristic intelligence engine scoring kingpin centrality, detecting tower convergence during crimes, and providing an interactive Q&A copilot for investigating officers.</p>
+                <div class="feature-tag">Syndicate Hierarchy • Natural Language Chat</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: State Commands & Contact -->
+        <section id="section-contact" class="landing-section">
+          <div class="section-container">
+            <div class="section-tag">PAN-INDIA POLICE COMMANDS & HELPLINES</div>
+            <h2 class="section-title">STATE COMMAND STATIONS & 24/7 DISPATCH</h2>
+            <p class="section-subtitle">Central intelligence integration center and regional coordination desks across Indian States & UTs.</p>
+
+            <div class="contact-grid">
+              <div class="contact-card">
+                <h3>📍 National Central Command</h3>
+                <p class="contact-detail"><strong>Special Cell Operations Command HQ</strong><br />Lodhi Colony Complex, New Delhi - 110003</p>
+                <p class="contact-detail"><strong>Jurisdiction:</strong> Pan-India Inter-State Synergy</p>
+                <div class="contact-badge">STATUS: 24/7 ACTIVE SURVEILLANCE</div>
+              </div>
+
+              <div class="contact-card">
+                <h3>📞 National Emergency Desks</h3>
+                <p class="contact-detail"><strong>National Cyber Crime Helpline:</strong> 1930</p>
+                <p class="contact-detail"><strong>All India Police Emergency:</strong> 112</p>
+                <p class="contact-detail"><strong>Central Wiretap & CDR Desk:</strong> +91 11 2436 0000</p>
+                <div class="contact-badge">ENCRYPTION: AES-256 RESTRICTED</div>
+              </div>
+
+              <div class="contact-card">
+                <h3>🏢 Regional Zonal Commands</h3>
+                <p class="contact-detail"><strong>Northern Zone:</strong> Delhi Police Special Cell & UP STF</p>
+                <p class="contact-detail"><strong>Western Zone:</strong> Maharashtra Cyber & Gujarat CID</p>
+                <p class="contact-detail"><strong>Southern Zone:</strong> Karnataka & Telangana Cyber Security Bureaus</p>
+                <div class="contact-badge">ALL 28 STATES & 8 UTS ACCREDITED</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Landing Footer with Official Emblem -->
+        <footer class="landing-footer">
+          <div class="footer-container">
+            <div class="footer-emblem-wrap">
+              <img src="emblem.svg" alt="State Emblem of India — Satyameva Jayate" class="official-emblem-img emblem-sm" style="margin-bottom: 8px;" />
+              <div class="footer-emblem-text">सत्यमेव जयते</div>
+              <p>CONFIDENTIAL LAW ENFORCEMENT INFORMATION SYSTEM • MINISTRY OF HOME AFFAIRS • GOVERNMENT OF INDIA</p>
+            </div>
+            <p class="legal-notice">Unauthorized access, extraction, or disclosure of criminal intelligence from LinkTrace is punishable under Section 43 & 66 of the Information Technology Act and the Bharatiya Nyaya Sanhita.</p>
+          </div>
+        </footer>
+      </div>
+
+
+      <!-- ================================================================= -->
+      <!-- VIEW 2: LAW ENFORCEMENT OFFICER LOGIN PORTAL                      -->
+      <!-- ================================================================= -->
+      <div id="view-login" class="main-view">
+        <div class="login-wrapper">
+          <div class="login-card">
+            <!-- Official Emblem on Login -->
+            <div class="login-emblem-header">
+              <div class="national-emblem emblem-lg">
+                <img src="emblem.svg" alt="Official State Emblem of India — Satyameva Jayate" class="official-emblem-img" />
+              </div>
+              <div class="login-badge-sub">GOVERNMENT OF INDIA • RESTRICTED ACCESS</div>
+              <h2 class="login-title">OFFICER SECURE PORTAL</h2>
+              <p class="login-sub">Authorized Police & Intelligence Personnel Authentication</p>
+            </div>
+
+            <!-- Prominent Demo Login Bypass (One Click) -->
+            <div class="demo-login-banner">
+              <div class="demo-banner-tag">⚡ PRESENTATION & EVALUATION ACCESS</div>
+              <button id="btn-demo-login" class="btn btn-demo-glow" type="button">
+                <span>⚡</span> Demo Officer 1-Click Access (Insp. Vikram Sharma)
+              </button>
+              <div class="demo-banner-note">Bypass credentials and instantly launch the Pan-India investigation command session.</div>
+            </div>
+
+            <div class="login-divider">
+              <span>OR AUTHENTICATE WITH BADGE</span>
+            </div>
+
+            <!-- Standard Credentials Form -->
+            <form id="officer-login-form" class="login-form">
+              <div class="form-row">
+                <label for="login-badge">Officer Badge / PIS Number</label>
+                <input id="login-badge" type="text" placeholder="e.g. DL-SP-4412" value="DL-SP-4412" required />
+              </div>
+              <div class="form-row">
+                <label for="login-station">State Police / Agency Unit</label>
+                <select id="login-station">
+                  <option value="Delhi Police Special Cell">Delhi Police Special Cell (HQ)</option>
+                  <option value="Maharashtra Cyber / Crime Branch">Maharashtra Cyber / Crime Branch (Mumbai)</option>
+                  <option value="Telangana Cyber Security Bureau">Telangana Cyber Security Bureau (Hyderabad)</option>
+                  <option value="Karnataka Cyber Command">Karnataka Cyber Crime Division (Bengaluru)</option>
+                  <option value="Uttar Pradesh STF">Uttar Pradesh STF (Lucknow)</option>
+                  <option value="West Bengal STF">West Bengal STF (Kolkata)</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="login-pin">Security PIN / Password</label>
+                <input id="login-pin" type="password" placeholder="••••••••" value="police123" required />
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block btn-lg">
+                Authenticate & Launch Command Center
+              </button>
+            </form>
+
+            <div class="login-card-footer">
+              <button id="btn-back-to-landing" class="btn-link" type="button">
+                ← Return to Public Information Portal
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ================================================================= -->
+      <!-- VIEW 3: AUTHENTICATED COMMAND CENTER (5 Dedicated Full-Width Pages) -->
+      <!-- ================================================================= -->
+      <div id="view-app" class="main-view">
+
+        <!-- Prominent Authenticated Header / Navbar with Official Emblem -->
+        <header class="main-navbar">
+          <!-- Tier 1: Brand Identity & Officer Credentials -->
+          <div class="nav-top-bar">
+            <div class="nav-top-container">
+              <div class="nav-brand">
+                <!-- Official Satyameva Jayate Emblem in App Header -->
+                <div class="national-emblem emblem-sm" aria-label="Official State Emblem of India — Satyameva Jayate">
+                  <img src="emblem.svg" alt="State Emblem of India — Satyameva Jayate" class="official-emblem-img" />
+                </div>
+                <div class="brand-text-block">
+                  <div class="emblem-super-title">GOVERNMENT OF INDIA • POLICE INTELLIGENCE COMMAND</div>
+                  <div class="brand-title">LINKTRACE</div>
+                  <div class="emblem-motto">सत्यमेव जयते • CRIME NEXUS & CYBER COMMAND</div>
+                </div>
+              </div>
+
+              <!-- Officer Profile & Actions -->
+              <div class="nav-actions">
+                <div class="officer-session-tag">
+                  <span class="officer-dot"></span>
+                  <span id="active-officer-label">INSP. V. SHARMA</span>
+                </div>
+                <button id="btn-add-record" class="btn btn-accent btn-sm" type="button">
+                  <span>+</span> New Record
+                </button>
+                <button id="btn-logout" class="btn btn-ghost btn-sm" title="Log out from command session" type="button">
+                  <span>🚪</span> Logout
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 2: Dedicated Navigation Tabs (Full Width, Centered, Never Cut Off) -->
+          <div class="nav-tabs-bar">
+            <div class="nav-tabs-container">
+              <nav class="nav-links" aria-label="Primary Navigation">
+                <button class="nav-item active" data-page="dashboard" type="button">
+                  <span class="nav-icon">📊</span>
+                  <span class="nav-text">Dashboard</span>
+                </button>
+                <button class="nav-item" data-page="suspects" type="button">
+                  <span class="nav-icon">👤</span>
+                  <span class="nav-text">Suspect Profiles</span>
+                </button>
+                <button class="nav-item" data-page="firs" type="button">
+                  <span class="nav-icon">📁</span>
+                  <span class="nav-text">FIR Records</span>
+                </button>
+                <button class="nav-item" data-page="vehicles" type="button">
+                  <span class="nav-icon">🚘</span>
+                  <span class="nav-text">Vehicles & Logs</span>
+                </button>
+                <button class="nav-item" data-page="transactions" type="button">
+                  <span class="nav-icon">💸</span>
+                  <span class="nav-text">Financial Transactions</span>
+                </button>
+                <button class="nav-item" data-page="entry" type="button">
+                  <span class="nav-icon">📝</span>
+                  <span class="nav-text">Officer Data Entry</span>
+                </button>
+              </nav>
+            </div>
+          </div>
+        </header>
+
+        <!-- Pages View Wrapper (Unrestricted Scrolling) -->
+        <main class="pages-wrapper">
+
+          <!-- ============================================== -->
+          <!-- PAGE 1: COMMAND DASHBOARD                      -->
+          <!-- ============================================== -->
+          <section id="page-dashboard" class="page-view active">
+            <div class="page-container">
+              <div class="page-header">
+                <div class="header-tag">NATIONAL COMMAND OVERVIEW • PAN-INDIA JURISDICTION</div>
+                <h1 class="page-title">PAN-INDIA INVESTIGATION OPERATIONS DASHBOARD</h1>
+                <p class="page-desc">Comprehensive nationwide overview of active suspects, inter-state registered crime cases, getaway vehicles, and multi-state hawala money pipelines.</p>
+              </div>
+
+              <!-- KPI Summary Cards -->
+              <div class="kpi-grid" id="dashboard-kpis">
+                <div class="kpi-card">
+                  <div class="kpi-icon">👤</div>
+                  <div class="kpi-data">
+                    <div class="kpi-value" id="kpi-suspects">--</div>
+                    <div class="kpi-label">ACTIVE SUSPECTS (PILOT)</div>
+                  </div>
+                </div>
+                <div class="kpi-card danger">
+                  <div class="kpi-icon">🚨</div>
+                  <div class="kpi-data">
+                    <div class="kpi-value" id="kpi-wanted">--</div>
+                    <div class="kpi-label">WANTED KINGPINS</div>
+                  </div>
+                </div>
+                <div class="kpi-card">
+                  <div class="kpi-icon">📁</div>
+                  <div class="kpi-data">
+                    <div class="kpi-value" id="kpi-firs">--</div>
+                    <div class="kpi-label">INTER-STATE FIRS</div>
+                  </div>
+                </div>
+                <div class="kpi-card warning">
+                  <div class="kpi-icon">💰</div>
+                  <div class="kpi-data">
+                    <div class="kpi-value" id="kpi-loss">--</div>
+                    <div class="kpi-label">PILOT CASE LOSS ESTIMATE</div>
+                  </div>
+                </div>
+                <div class="kpi-card success">
+                  <div class="kpi-icon">💸</div>
+                  <div class="kpi-data">
+                    <div class="kpi-value" id="kpi-transferred">--</div>
+                    <div class="kpi-label">HAWALA & UPI TRACED</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive AI Detective Copilot & Q&A Assistant -->
+              <div class="ai-copilot-container" id="dashboard-copilot-container">
+                <div class="copilot-header">
+                  <div class="copilot-title-wrap">
+                    <div class="copilot-bot-avatar">🤖</div>
+                    <div>
+                      <div class="copilot-badge">AI MULTILINGUAL INTELLIGENCE ASSISTANT • 🎙️ VOICE ENABLED</div>
+                      <h2 class="copilot-title">AI Detective Copilot & Voice Desk</h2>
+                      <div class="copilot-subtitle">Ask questions in any language (हिन्दी, English, Hinglish) using text or voice typing. Instant data-driven responses with speech readout.</div>
+                    </div>
+                  </div>
+
+                  <!-- Multilingual Selector & Status Badge -->
+                  <div class="copilot-controls-group">
+                    <div class="copilot-lang-wrap">
+                      <label for="copilot-lang-select" class="copilot-lang-label">🌐 भाषा / Language:</label>
+                      <select id="copilot-lang-select" class="copilot-lang-select">
+                        <option value="auto">Auto-Detect (Hindi / English / Hinglish)</option>
+                        <option value="hi">🇮🇳 हिन्दी (Hindi)</option>
+                        <option value="hinglish">🇮🇳 Hinglish (Hindi-English)</option>
+                        <option value="en">🇬🇧 English</option>
+                        <option value="bn">🇮🇳 বাংলা (Bengali)</option>
+                        <option value="mr">🇮🇳 मराठी (Marathi)</option>
+                        <option value="ta">🇮🇳 தமிழ் (Tamil)</option>
+                        <option value="te">🇮🇳 తెలుగు (Telugu)</option>
+                        <option value="gu">🇮🇳 ગુજરાતી (Gujarati)</option>
+                      </select>
+                    </div>
+                    <div class="copilot-status-indicator">
+                      <span class="pulse-green"></span>
+                      <span>MULTILINGUAL & VOICE ACTIVE</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Quick Inquiry Chips (Bilingual) -->
+                <div class="copilot-chips-wrap">
+                  <div class="chips-label">⚡ त्वरित प्रश्न / QUICK INVESTIGATION QUERIES:</div>
+                  <div class="copilot-chips-row">
+                    <button class="copilot-chip" type="button" data-query="Who is Neha Kapoor and what is her role?">👤 Neha Kapoor कौन है?</button>
+                    <button class="copilot-chip" type="button" data-query="Give me a brief on kingpin Vikram Malhotra">🚨 सरगना Vikram Malhotra की कुंडली</button>
+                    <button class="copilot-chip" type="button" data-query="Explain the inter-state Hawala money trail and mule accounts">💸 Hawala मनी ट्रेल और Mules</button>
+                    <button class="copilot-chip" type="button" data-query="What happened in the Khan Market Jewellery Heist FIR-2024-DL-4412?">📁 Khan Market डकैती केस (FIR-4412)</button>
+                    <button class="copilot-chip" type="button" data-query="Which suspects pinged Khan Market cell tower together during the crime?">📡 Cell Tower CDR डेटा ओवरलैप</button>
+                    <button class="copilot-chip" type="button" data-query="What vehicles were used in the heist and where were they found?">🚘 गिरोह की गाड़ियाँ कहाँ हैं?</button>
+                  </div>
+                </div>
+
+                <!-- Chat Messages Stream -->
+                <div class="copilot-chat-box scrollable" id="copilot-chat-box">
+                  <div class="copilot-msg copilot-msg-ai">
+                    <div class="copilot-msg-avatar">🤖</div>
+                    <div class="copilot-msg-body">
+                      <div class="copilot-msg-meta">LINKTRACE DETECTIVE ASSISTANT • MULTILINGUAL READY</div>
+                      <div class="copilot-msg-content" id="copilot-welcome-msg">
+                        <strong>नमस्ते / Greetings Officer!</strong> I am your Multilingual AI Detective Copilot. Aap mujhse kisi bhi bhasha me sawaal pooch sakte hain (Hindi, Hinglish, English, etc.) or mic button 🎤 click karke <strong>Voice Typing</strong> bhi kar sakte hain. Click any quick query chip above or type/speak your question below.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Voice Status Banner -->
+                <div id="voice-status-indicator" class="voice-status-banner" style="display:none;">
+                  <span class="voice-wave-dot"></span>
+                  <span id="voice-status-text">Listening... Speak now in Hindi or English</span>
+                </div>
+
+                <!-- Chat Input Form with Voice Typing -->
+                <form id="copilot-form" class="copilot-input-form">
+                  <div class="copilot-input-wrap">
+                    <span class="copilot-input-icon">🔍</span>
+                    <input
+                      type="text"
+                      id="copilot-query-input"
+                      class="copilot-input"
+                      placeholder="Type or click 🎤 to speak: 'Neha Kapoor kaun hai?', 'Hawala trail batao', 'Tower pings'..."
+                      autocomplete="off"
+                    />
+                    <button type="button" id="btn-copilot-mic" class="btn-copilot-mic" title="Voice Typing (Speak in Hindi or English)">
+                      <span class="mic-icon">🎤</span>
+                      <span class="mic-label">Voice Typing</span>
+                    </button>
+                    <button type="button" id="btn-copilot-clear" class="btn-copilot-clear" title="Reset chat history">Clear</button>
+                    <button type="submit" id="btn-copilot-send" class="btn btn-accent btn-copilot-submit">
+                      <span>Ask AI</span> ➔
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Dashboard Split View: D3 Graph & GIS Map -->
+              <div class="dashboard-split-grid">
+                <!-- Network Graph Panel -->
+                <div class="dashboard-panel">
+                  <div class="panel-topbar">
+                    <div class="panel-heading">
+                      <span class="panel-icon">🕸️</span>
+                      <h3>INTER-STATE CRIME NEXUS GRAPH</h3>
+                    </div>
+                    <div class="panel-action-group">
+                      <button id="btn-reset-graph" class="btn btn-sm btn-ghost">Reset View</button>
+                    </div>
+                  </div>
+                  <div class="graph-legend-bar">
+                    <span><i class="dot suspect"></i> Suspect</span>
+                    <span><i class="dot fir"></i> FIR Case</span>
+                    <span><i class="dot vehicle"></i> Vehicle</span>
+                    <span><i class="line call"></i> CDR Call</span>
+                    <span><i class="line money"></i> Transfer</span>
+                  </div>
+                  <div id="graph-container" class="dashboard-canvas-wrap"></div>
+                </div>
+
+                <!-- GIS Map Panel (Pan-India Zonal Nav) -->
+                <div class="dashboard-panel">
+                  <div class="panel-topbar">
+                    <div class="panel-heading">
+                      <span class="panel-icon">🗺️</span>
+                      <h3>PAN-INDIA GIS SURVEILLANCE & RADAR MAP</h3>
+                    </div>
+                    <div class="city-pill-group">
+                      <button class="city-pill active" data-city="all">Pan-India</button>
+                      <button class="city-pill" data-city="north">North Zone</button>
+                      <button class="city-pill" data-city="west">West Zone</button>
+                      <button class="city-pill" data-city="south">South Zone</button>
+                      <button class="city-pill" data-city="east">East Zone</button>
+                    </div>
+                  </div>
+                  <div id="gis-map" class="dashboard-map-wrap"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ============================================== -->
+          <!-- PAGE 2: SUSPECT PROFILES                       -->
+          <!-- ============================================== -->
+          <section id="page-suspects" class="page-view">
+            <div class="page-container">
+              <div class="page-header">
+                <div class="header-tag">SYNDICATE DOSSIERS & CRIMINAL PROFILES • PAN-INDIA REPOSITORY</div>
+                <h1 class="page-title">ACTIVE SUSPECT DOSSIERS</h1>
+                <p class="page-desc">Comprehensive criminal profiles of organized inter-state syndicate members, associates, aliases, and surveillance tags.</p>
+              </div>
+
+              <!-- Filter & Search Bar -->
+              <div class="filter-controls-row">
+                <div class="filter-chips" id="suspects-filter-chips">
+                  <button class="filter-chip active" data-filter="all">All Suspects</button>
+                  <button class="filter-chip" data-filter="Wanted">Wanted</button>
+                  <button class="filter-chip" data-filter="Under watch">Under Watch</button>
+                  <button class="filter-chip" data-filter="In custody">In Custody</button>
+                  <button class="filter-chip" data-filter="Person of interest">Person of Interest</button>
+                </div>
+                <div class="inline-search">
+                  <input id="search-suspects-input" type="text" placeholder="Filter suspects by name, alias, city, phone..." />
+                </div>
+              </div>
+
+              <!-- Suspects Grid Cards -->
+              <div class="cards-grid" id="suspects-grid"></div>
+            </div>
+          </section>
+
+          <!-- ============================================== -->
+          <!-- PAGE 3: FIR RECORDS                            -->
+          <!-- ============================================== -->
+          <section id="page-firs" class="page-view">
+            <div class="page-container">
+              <div class="page-header">
+                <div class="header-tag">INTER-STATE CRIME INCIDENTS & LEGAL PROCEEDINGS</div>
+                <h1 class="page-title">REGISTERED FIR RECORDS & CRIME CASES</h1>
+                <p class="page-desc">Official First Information Reports filed across Delhi-NCR, Gurugram, and Mumbai jurisdictions with recovery estimates.</p>
+              </div>
+
+              <!-- Filter Controls -->
+              <div class="filter-controls-row">
+                <div class="filter-chips" id="firs-filter-chips">
+                  <button class="filter-chip active" data-filter="all">All Cases</button>
+                  <button class="filter-chip" data-filter="Chargesheet filed">Chargesheet Filed</button>
+                  <button class="filter-chip" data-filter="Under investigation">Under Investigation</button>
+                </div>
+                <div class="inline-search">
+                  <input id="search-firs-input" type="text" placeholder="Search FIR number, police station, sections..." />
+                </div>
+              </div>
+
+              <!-- FIR Cards Grid -->
+              <div class="firs-list-wrap" id="firs-grid"></div>
+            </div>
+          </section>
+
+          <!-- ============================================== -->
+          <!-- PAGE 4: VEHICLES & LOGS                        -->
+          <!-- ============================================== -->
+          <section id="page-vehicles" class="page-view">
+            <div class="page-container">
+              <div class="page-header">
+                <div class="header-tag">INTER-STATE SURVEILLANCE & TELECOM FEEDS</div>
+                <h1 class="page-title">VEHICLE SIGHTINGS & TELECOM CDR LOGS</h1>
+                <p class="page-desc">Tracked getaway cars, recovered stolen vehicles, and intercepted telecom Call Data Records (CDR) across cellular towers.</p>
+              </div>
+
+              <!-- Section 1: Tracked Vehicles -->
+              <div class="sub-section">
+                <div class="sub-section-header">
+                  <h2>🚘 TRACKED VEHICLES & CHASSIS RECORDS</h2>
+                  <span class="sub-count" id="vehicles-count">-- vehicles</span>
+                </div>
+                <div class="cards-grid" id="vehicles-grid"></div>
+              </div>
+
+              <!-- Section 2: Telecom CDR Calls Table -->
+              <div class="sub-section" style="margin-top: 40px;">
+                <div class="sub-section-header">
+                  <h2>📡 TELECOM CDR INTERCEPT LOGS</h2>
+                  <span class="sub-count" id="calls-count">-- call logs</span>
+                </div>
+                <div class="table-card">
+                  <div class="table-responsive">
+                    <table class="data-table">
+                      <thead>
+                        <tr>
+                          <th>CALL ID</th>
+                          <th>TIMESTAMP</th>
+                          <th>CALLER (FROM)</th>
+                          <th>RECEIVER (TO)</th>
+                          <th>DURATION</th>
+                          <th>CELL TOWER</th>
+                          <th>DEVICE IMEI</th>
+                          <th>ACTION</th>
+                        </tr>
+                      </thead>
+                      <tbody id="calls-table-body"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ============================================== -->
+          <!-- PAGE 5: FINANCIAL TRANSACTIONS                 -->
+          <!-- ============================================== -->
+          <section id="page-transactions" class="page-view">
+            <div class="page-container">
+              <div class="page-header">
+                <div class="header-tag">INTER-STATE MONEY LAUNDERING & HAWALA TRACE</div>
+                <h1 class="page-title">FINANCIAL TRANSACTIONS & MONEY TRAILS</h1>
+                <p class="page-desc">Chronological ledger of suspicious digital UPI credits, bank IMPS transfers, and cash hawala deliveries across states.</p>
+              </div>
+
+              <!-- Financial Statistics Banner -->
+              <div class="financial-hero-bar">
+                <div class="fin-stat-box">
+                  <div class="fin-label">PILOT CASE FUNDS TRACED</div>
+                  <div class="fin-val" id="fin-total-amount">₹1,06,82,000</div>
+                </div>
+                <div class="fin-stat-box">
+                  <div class="fin-label">TRANSACTION COUNT</div>
+                  <div class="fin-val" id="fin-tx-count">12 Transfers</div>
+                </div>
+                <div class="fin-stat-box">
+                  <div class="fin-label">IDENTIFIED MONEY MULES</div>
+                  <div class="fin-val">Neha Kapoor, Anita Desai</div>
+                </div>
+                <div class="fin-stat-box">
+                  <div class="fin-label">CASH-OUT DESTINATION</div>
+                  <div class="fin-val">Dongri / Zaveri Bazaar, Mumbai</div>
+                </div>
+              </div>
+
+              <!-- Transactions Grid -->
+              <div class="transactions-list-grid" id="transactions-grid"></div>
+            </div>
+          </section>
+
+          <!-- ============================================== -->
+          <!-- PAGE 6: OFFICER DATA ENTRY PORTAL              -->
+          <!-- ============================================== -->
+          <section id="page-entry" class="page-view">
+            <div class="page-container">
+              <!-- Page Header with National Law Enforcement Mandate -->
+              <div class="page-header">
+                <div class="header-tag">CONFIDENTIAL POLICE REPOSITORY • CCTNS REAL-TIME INGESTION DESK</div>
+                <h1 class="page-title">OFFICER DATA ENTRY & EVIDENCE LOGGING PORTAL</h1>
+                <p class="page-desc">Authorized command interface for Investigating Officers and Cyber SITs to register newly discovered suspects, registered FIR cases, tracked getaway vehicles, and illicit hawala transactions. Newly added records immediately synchronize to their respective pages and local database in real-time.</p>
+              </div>
+
+              <!-- High-Tech Category Selector Cards (4 Modules) -->
+              <div class="entry-category-section">
+                <label class="entry-section-label">⚡ SELECT RECORD CATEGORY TO REGISTER:</label>
+                <div class="entry-category-grid" id="entry-category-pills">
+                  <div class="category-card active" data-category="suspects" role="button" tabindex="0">
+                    <div class="cat-card-header">
+                      <span class="cat-card-icon">👤</span>
+                      <span class="cat-card-status-dot"></span>
+                    </div>
+                    <div class="cat-card-title">Suspect Dossier</div>
+                    <div class="cat-card-desc">Target Kingpin, Operative & Mule Profiles</div>
+                    <div class="cat-card-footer">
+                      <span class="cat-badge">ACTIVE</span>
+                    </div>
+                  </div>
+
+                  <div class="category-card" data-category="firs" role="button" tabindex="0">
+                    <div class="cat-card-header">
+                      <span class="cat-card-icon">📁</span>
+                      <span class="cat-card-status-dot"></span>
+                    </div>
+                    <div class="cat-card-title">FIR / Crime Case</div>
+                    <div class="cat-card-desc">Police Station, IPC/BNS Sections & Loss Value</div>
+                    <div class="cat-card-footer">
+                      <span class="cat-badge">SELECT</span>
+                    </div>
+                  </div>
+
+                  <div class="category-card" data-category="vehicles" role="button" tabindex="0">
+                    <div class="cat-card-header">
+                      <span class="cat-card-icon">🚘</span>
+                      <span class="cat-card-status-dot"></span>
+                    </div>
+                    <div class="cat-card-title">Tracked Vehicle</div>
+                    <div class="cat-card-desc">Getaway Fleet, Plate Number & ANPR Sighting</div>
+                    <div class="cat-card-footer">
+                      <span class="cat-badge">SELECT</span>
+                    </div>
+                  </div>
+
+                  <div class="category-card" data-category="transactions" role="button" tabindex="0">
+                    <div class="cat-card-header">
+                      <span class="cat-card-icon">💸</span>
+                      <span class="cat-card-status-dot"></span>
+                    </div>
+                    <div class="cat-card-title">Financial Transaction</div>
+                    <div class="cat-card-desc">Hawala Trails, Layering & Mule Accounts</div>
+                    <div class="cat-card-footer">
+                      <span class="cat-badge">SELECT</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Main Data Entry Layout -->
+              <div class="data-entry-layout">
+                <!-- Left Column: Unified Entry Form Card -->
+                <div class="entry-card-main" id="entry-card-main">
+                  <!-- Active Category Header Banner -->
+                  <div class="entry-form-header">
+                    <div class="entry-form-title-group">
+                      <span class="entry-active-icon" id="entry-category-icon">👤</span>
+                      <div>
+                        <h3 id="entry-category-heading">REGISTER SUSPECT DOSSIER</h3>
+                        <div class="entry-form-subtext" id="entry-category-subtext">Register an accused kingpin, lieutenant, mule account holder, or operative.</div>
+                      </div>
+                    </div>
+                    <div class="entry-id-badge" id="entry-id-preview">
+                      <span>SYSTEM ID:</span> <strong id="entry-id-preview-val">AUTO S011</strong>
+                    </div>
+                  </div>
+
+                  <!-- Dynamic Feedback Alert Banner -->
+                  <div id="entry-alert-banner" class="entry-alert-banner" style="display:none;"></div>
+
+                  <!-- Unified Officer Entry Form (No HTML5 blocking required attributes) -->
+                  <form id="officer-entry-form" class="entry-form" novalidate>
+                    <input type="hidden" id="entry-record-type" value="suspects" />
+
+                    <!-- ============================================== -->
+                    <!-- FIELDSET 1: SUSPECTS                           -->
+                    <!-- ============================================== -->
+                    <div id="entry-fields-suspects" class="entry-dynamic-fieldset active">
+                      <div class="form-row-grid">
+                        <div class="form-field">
+                          <label for="entry-suspect-name">Full Legal Name <span class="req">*</span></label>
+                          <div class="input-with-icon">
+                            <span class="input-icon">👤</span>
+                            <input id="entry-suspect-name" type="text" placeholder="e.g. Ramesh 'Kalia' Kumar" />
+                          </div>
+                        </div>
+                        <div class="form-field">
+                          <label for="entry-suspect-alias">Alias / Street Name</label>
+                          <div class="input-with-icon">
+                            <span class="input-icon">🏷️</span>
+                            <input id="entry-suspect-alias" type="text" placeholder="e.g. Kalia, Vicky Don, The Accountant" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-row-grid">
+                        <div class="form-field">
+                          <label for="entry-suspect-role">Syndicate Role <span class="req">*</span></label>
+                          <div class="input-with-icon">
+                            <span class="input-icon">🎯</span>
+                            <input id="entry-suspect-role" type="text" placeholder="e.g. Syndicate Kingpin, Mule Coordinator, Safehouse Operator" />
+                          </div>
+                        </div>
+                        <div class="form-field">
+                          <label for="entry-suspect-city">State / Jurisdiction</label>
+                          <div class="input-with-icon">
+                            <span class="input-icon">📍</span>
+                            <input id="entry-suspect-city" type="text" placeholder="e.g. New Delhi, Mumbai, Gurugram, Jaipur" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-row-grid three-col">
+                        <div class="form-field">
+                          <label for="entry-suspect-phone">Primary Contact Phone</label>
+                          <div class="input-with-icon">
+                            <span class="input-icon">📞</span>
+                            <input id="entry-suspect-phone" type="text" placeholder="e.g. 9812345678" />
+                          </div>
+                        </div>
+                        <div class="form-field">
+                          <label for="entry-suspect-status">Legal Status</label>
+                          <select id="entry-suspect-status">
+                            <option value="Wanted">Wanted (Arrest Warrant)</option>
+                            <option value="Under watch">Under Surveillance / Watch</option>
+                            <option value="In custody">In Judicial Custody</option>
+                            <option value="Person of interest">Person of Interest</option>
+                          </select>
+                        </div>
+                        <div class="form-field">
+                          <label for="entry-suspect-risk">Risk Assessment</label>
+                          <select id="entry-suspect-risk">
+                            <option value="high">High Risk (Armed / Dangerous)</option>
+                            <option value="medium">Medium Risk</option>
+                            <option value="low">Low Risk</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-field">
+                        <label for="entry-suspect-notes">Confidential Intelligence Notes & Modus Operandi</label>
+                        <textarea id="entry-suspect-notes" rows="3" placeholder="Provide background on criminal modus operandi, transit hideouts, known firearms, or associates..."></textarea>
+                      </div>
+                    </div>
+
+                    <!-- ============================================== -->
+                    <!-- FIELDSET 2: FIR RECORDS                        -->
+                    <!-- ============================================== -->
+                    <div id="entry-fields-firs" class="entry-dynamic-fieldset">
+                      <div class="form-row-grid">
+                        <div class="form-field">
+                          <label for="entry-fir-id">FIR Reference Number</label>
+                          <div class="input-with-icon">
+                            <span class="input-icon">📁</span>
+                            <input id="entry-fir-id" type="text" placeholder="Auto-generated if blank (e.g. FIR-2026-DL-1005)" />
+                          </div>
+                        </div>
+                        <div class="form-field">
+                          <label for="entry-fir-station">Police Station / Investigation Unit <span class="req">*</span></label>
+                          <div class="input-with-icon">
+                            <span class="input-icon">🏢</span>
+                            <input id="entry-fir-station" type="text" placeholder="e.g. Special Cell New Delhi, Tughlak Road PS" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-field">
+                        <label for="entry-fir-title">Case Title / Primary Offense <span class="req">*</span></label>
+                        <div class="input-with-icon">
+                          <span class="input-icon">⚖️</span>
+                          <input id="entry-fir-title" type="text" placeholder="e.g. Inter-State Armed Bullion Heist & Arms Conspiracy" />
+                        </div>
+                      </div>
+
+                      <div class="form-row-grid">
+                        <div class="form-field">
+                          <label for="entry-fir-sections">Penal Sections (BNS / IPC / Arms Act)</label>
+                          <div class="input-with-icon">
+                            <span class="input-icon">📜</span>
+                            <input id="entry-fir-sections" type="text" placeholder="e.g. 392 IPC, 397 IPC, 120B IPC, Arms Act 25/27" />
+                          </div>
+                        </div>
+                        <div class="form-field">
+                          <label for="entry-fir-status">Investigation Status</label>
+                          <select id="entry-fir-status">
+                            <option value="Under investigation">Under Investigation</option>
+                            <option value="Chargesheet filed">Chargesheet Filed</option>
+                            <option value="Open">Open Investigation</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-row-grid">
+                        <div class="form-field">
+                          <label for="entry-fir-loss">Estimated Crime Loss (INR ₹)</label>
+                          <div class="input-with-icon">
+                            <span class="input-icon">₹</span>
+                            <input id="entry-fir-loss" type="number" placeholder="e.g. 25000000" />
+                          </div>
+                        </div>
+                        <div class="form-field">
+                          <label for="entry-fir-recovered">Recovered Amount (INR ₹)</label>
+                          <div class="input-with-icon">
+                            <span class="input-icon">₹</span>
+                            <input id="entry-fir-recovered" type="number" placeholder="e.g. 5000000" value="0" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-field">
+                        <label for="entry-fir-accused">Prime Accused / Suspect Names or IDs</label>
+                        <div class="input-with-icon">
+                          <span class="input-icon">👥</span>
+                          <input id="entry-fir-accused" type="text" placeholder="e.g. Vikram Malhotra, Ramesh Kalia, Neha Kapoor" />
+                        </div>
+                      </div>
+
+                      <div class="form-field">
+                        <label for="entry-fir-summary">FIR Incident Summary & Crime Brief</label>
+                        <textarea id="entry-fir-summary" rows="3" placeholder="Summary of armed breach, weapon types, getaway direction, or CCTV footage evidence..."></textarea>
+                      </div>
+                    </div>
+
+                    <!-- ============================================== -->
+                    <!-- FIELDSET 3: VEHICLES                           -->
+                    <!-- ============================================== -->
+                    <div id="entry-fields-vehicles" class="entry-dynamic-fieldset">
+                      <div class="form-row-grid">
+                        <div class="form-field">
+                          <label for="entry-vehicle-plate">Registration / Number Plate <span class="req">*</span></label>
+                          <div class="input-with-icon">
+                            <span class="input-icon">🚘</span>
+                            <input id="entry-vehicle-plate" type="text" placeholder="e.g. UP-16-EF-9012, DL-1C-AA-1001" />
+                          </div>
+                        </div>
+                        <div class="form-field">
+                          <label for="entry-vehicle-model">Vehicle Make & Model <span class="req">*</span></label>
+                          <div class="input-with-icon">
+                            <span class="input-icon">🚗</span>
+                            <input id="entry-vehicle-model" type="text" placeholder="e.g. Toyota Fortuner 4x4, BMW 320d, Maruti Swift" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-row-grid three-col">
+                        <div class="form-field">
+                          <label for="entry-vehicle-color">Vehicle Color</label>
+                          <input id="entry-vehicle-color" type="text" placeholder="e.g. Pearl White, Matte Black" />
+                        </div>
+                        <div class="form-field">
+                          <label for="entry-vehicle-status">Surveillance Status</label>
+                          <select id="entry-vehicle-status">
+                            <option value="Under surveillance">Under Surveillance</option>
+                            <option value="Tracked">Tracked on Radar</option>
+                            <option value="Seized">Seized / Intercepted</option>
+                            <option value="Wanted">Wanted Getaway Vehicle</option>
+                          </select>
+                        </div>
+                        <div class="form-field">
+                          <label for="entry-vehicle-state">Registered State</label>
+                          <input id="entry-vehicle-state" type="text" placeholder="e.g. Delhi-NCR, Uttar Pradesh, Haryana" />
+                        </div>
+                      </div>
+
+                      <div class="form-row-grid">
+                        <div class="form-field">
+                          <label for="entry-vehicle-location">Last Sighted Location</label>
+                          <div class="input-with-icon">
+                            <span class="input-icon">📍</span>
+                            <input id="entry-vehicle-location" type="text" placeholder="e.g. Badarpur Toll Plaza, Ghaziabad Workshop" />
+                          </div>
+                        </div>
+                        <div class="form-field">
+                          <label for="entry-vehicle-suspect">Associated Suspect / Driver</label>
+                          <div class="input-with-icon">
+                            <span class="input-icon">👤</span>
+                            <input id="entry-vehicle-suspect" type="text" placeholder="e.g. Vikram Malhotra, Deepak Verma" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- ============================================== -->
+                    <!-- FIELDSET 4: TRANSACTIONS                       -->
+                    <!-- ============================================== -->
+                    <div id="entry-fields-transactions" class="entry-dynamic-fieldset">
+                      <div class="form-row-grid">
+                        <div class="form-field">
+                          <label for="entry-tx-from">Source Account / Bank <span class="req">*</span></label>
+                          <div class="input-with-icon">
+                            <span class="input-icon">🏦</span>
+                            <input id="entry-tx-from" type="text" placeholder="e.g. HDFC-7761004455 (Gurugram)" />
+                          </div>
+                        </div>
+                        <div class="form-field">
+                          <label for="entry-tx-to">Beneficiary Account / Bank <span class="req">*</span></label>
+                          <div class="input-with-icon">
+                            <span class="input-icon">🏛️</span>
+                            <input id="entry-tx-to" type="text" placeholder="e.g. ICICI-9921008833 (Mumbai Dongri)" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-row-grid">
+                        <div class="form-field">
+                          <label for="entry-tx-amount">Amount in INR (₹) <span class="req">*</span></label>
+                          <div class="input-with-icon">
+                            <span class="input-icon">₹</span>
+                            <input id="entry-tx-amount" type="number" placeholder="e.g. 1250000" />
+                          </div>
+                        </div>
+                        <div class="form-field">
+                          <label for="entry-tx-mode">Transfer Mode</label>
+                          <select id="entry-tx-mode">
+                            <option value="UPI">UPI Digital Transfer</option>
+                            <option value="IMPS">IMPS Immediate Payment</option>
+                            <option value="RTGS">RTGS Bank Wire</option>
+                            <option value="Hawala Cash">Hawala Physical Courier</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-row-grid">
+                        <div class="form-field">
+                          <label for="entry-tx-sender">Sender Name / Mule</label>
+                          <input id="entry-tx-sender" type="text" placeholder="e.g. Neha Kapoor" />
+                        </div>
+                        <div class="form-field">
+                          <label for="entry-tx-receiver">Beneficiary Name / Mule</label>
+                          <input id="entry-tx-receiver" type="text" placeholder="e.g. Anita Desai" />
+                        </div>
+                      </div>
+
+                      <div class="form-field">
+                        <label for="entry-tx-narration">Bank Narration / Purpose</label>
+                        <input id="entry-tx-narration" type="text" placeholder="e.g. Layering tranche, Gold settlement, Bullion courier" />
+                      </div>
+                    </div>
+
+                    <!-- Form Action Buttons -->
+                    <div class="entry-form-actions">
+                      <button type="button" id="btn-entry-reset" class="btn btn-ghost">✕ Reset Fields</button>
+                      <button type="submit" id="btn-entry-submit" class="btn btn-accent btn-lg btn-glow">
+                        <span>💾</span> <span id="btn-entry-submit-label">Register Suspect & Add to Profiles ➔</span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+
+                <!-- Right Column: Officer Verification & Audit Feed -->
+                <div class="entry-sidebar-panel">
+                  <!-- Officer Verification Badge Card -->
+                  <div class="audit-card officer-card">
+                    <div class="officer-badge-header">
+                      <div class="officer-emblem-badge">🛡️</div>
+                      <div>
+                        <div class="audit-badge">COMMAND AUTHENTICATION</div>
+                        <h3 id="entry-officer-name">INSP. VIKRAM SHARMA</h3>
+                        <div class="officer-unit-tag">SPECIAL CELL • ANTI-GANG UNIT</div>
+                      </div>
+                    </div>
+                    <div class="audit-info-list">
+                      <div class="audit-row">
+                        <span class="audit-label">BADGE NUMBER:</span>
+                        <span class="audit-val">DL-SP-4412</span>
+                      </div>
+                      <div class="audit-row">
+                        <span class="audit-label">JURISDICTION:</span>
+                        <span class="audit-val">Pan-India Inter-State Command</span>
+                      </div>
+                      <div class="audit-row">
+                        <span class="audit-label">CCTNS RADAR:</span>
+                        <span class="audit-val text-emerald">● 24x7 REAL-TIME SYNC</span>
+                      </div>
+                      <div class="audit-row">
+                        <span class="audit-label">DATA INTEGRITY:</span>
+                        <span class="audit-val text-cyan">🔒 SHA-256 ENCRYPTED</span>
+                      </div>
+                    </div>
+                    <div class="audit-notice">
+                      ⚡ Adding a record automatically persists into <code>data.json</code> and redirects you to that category page to verify your new entry in real-time.
+                    </div>
+                  </div>
+
+                  <!-- Quick Registry Jump Cards -->
+                  <div class="audit-card" style="margin-top: 18px;">
+                    <div class="audit-header">
+                      <span class="audit-badge">ACTIVE REPOSITORIES</span>
+                      <h3>VIEW SYSTEM REGISTRIES</h3>
+                    </div>
+                    <div class="quick-view-actions">
+                      <button type="button" class="btn btn-outline btn-block" onclick="switchDashboardPage('suspects')">
+                        <span>👤</span> Suspect Profiles (<span id="stat-suspects-count">10</span>) ➔
+                      </button>
+                      <button type="button" class="btn btn-outline btn-block" onclick="switchDashboardPage('firs')">
+                        <span>📁</span> FIR Case Files (<span id="stat-firs-count">4</span>) ➔
+                      </button>
+                      <button type="button" class="btn btn-outline btn-block" onclick="switchDashboardPage('vehicles')">
+                        <span>🚘</span> Vehicles & Radar (<span id="stat-vehicles-count">5</span>) ➔
+                      </button>
+                      <button type="button" class="btn btn-outline btn-block" onclick="switchDashboardPage('transactions')">
+                        <span>💸</span> Financial Ledger (<span id="stat-tx-count">8</span>) ➔
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- In-Session Real-Time Entry Audit Feed -->
+                  <div class="audit-card" style="margin-top: 18px;">
+                    <div class="audit-header">
+                      <span class="audit-badge">SESSION LOGS</span>
+                      <h3>RECENT IN-SESSION ENTRIES</h3>
+                    </div>
+                    <div class="session-logs-list" id="session-logs-list">
+                      <div class="session-log-empty">No records registered in this session yet.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <!-- Slide-over Dossier Drawer (Right Side) -->
+        <div id="drawer-backdrop" class="drawer-backdrop"></div>
+        <aside id="dossier-drawer" class="dossier-drawer" aria-label="Investigation Dossier File">
+          <div class="drawer-header">
+            <div class="drawer-title-group">
+              <span class="drawer-badge">CONFIDENTIAL INTELLIGENCE DOSSIER</span>
+              <h2 id="drawer-entity-title">Suspect Profile</h2>
+            </div>
+            <div class="drawer-actions">
+              <button id="btn-print-drawer" class="btn btn-sm btn-ghost" title="Print this Dossier">🖨️ Print</button>
+              <button id="btn-close-drawer" class="btn-drawer-close" aria-label="Close Dossier">✕</button>
+            </div>
+          </div>
+          <div id="drawer-content" class="drawer-content scrollable"></div>
+        </aside>
+
+        <!-- Modal Dialog for Adding Records -->
+        <dialog id="new-record-modal" class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Add New Intelligence Record</h3>
+              <button id="btn-close-modal" class="btn-close" aria-label="Close dialog">✕</button>
+            </div>
+            <form id="add-record-form" class="modal-form">
+              <div class="form-row">
+                <label for="record-type">Record Category</label>
+                <select id="record-type" name="type" required>
+                  <option value="suspects">Suspect Dossier</option>
+                  <option value="firs">FIR / Crime Case</option>
+                  <option value="vehicles">Vehicle / Plate</option>
+                </select>
+              </div>
+
+              <div id="fields-suspect" class="dynamic-fields">
+                <div class="form-row">
+                  <label for="suspect-name">Full Name</label>
+                  <input id="suspect-name" name="name" type="text" placeholder="e.g. Ramesh 'Kalia' Kumar" required />
+                </div>
+                <div class="form-row-grid">
+                  <div>
+                    <label for="suspect-alias">Alias</label>
+                    <input id="suspect-alias" name="alias" type="text" placeholder="e.g. Kalia" />
+                  </div>
+                  <div>
+                    <label for="suspect-role">Syndicate Role</label>
+                    <input id="suspect-role" name="role" type="text" placeholder="e.g. Hawala Courier" />
+                  </div>
+                </div>
+                <div class="form-row-grid">
+                  <div>
+                    <label for="suspect-phone">Primary Phone</label>
+                    <input id="suspect-phone" name="phone" type="text" placeholder="e.g. 9812345678" />
+                  </div>
+                  <div>
+                    <label for="suspect-city">State / Jurisdiction</label>
+                    <input id="suspect-city" name="city" type="text" placeholder="e.g. New Delhi, Mumbai, Bengaluru" />
+                  </div>
+                </div>
+                <div class="form-row-grid">
+                  <div>
+                    <label for="suspect-status">Legal Status</label>
+                    <select id="suspect-status" name="status">
+                      <option value="Wanted">Wanted</option>
+                      <option value="Under watch">Under watch</option>
+                      <option value="In custody">In custody</option>
+                      <option value="Person of interest">Person of interest</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="suspect-risk">Risk Assessment</label>
+                    <select id="suspect-risk" name="risk">
+                      <option value="high">High Risk</option>
+                      <option value="medium">Medium Risk</option>
+                      <option value="low">Low Risk</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label for="suspect-notes">Confidential Intelligence Notes</label>
+                  <textarea id="suspect-notes" name="notes" rows="3" placeholder="Notes on known associates, modus operandi, surveillance details..."></textarea>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" id="btn-cancel-modal" class="btn btn-ghost">Cancel</button>
+                <button type="submit" class="btn btn-accent">Submit to Database</button>
+              </div>
+            </form>
+          </div>
+        </dialog>
+      </div>
+
+    </div>
+
+    <!-- Application Script -->
+    <script src="app.js"></script>
+  </body>
+</html>
