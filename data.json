@@ -1,0 +1,889 @@
+{
+  "meta": {
+    "system": "LinkTrace",
+    "jurisdiction": "Delhi-NCR / Mumbai / Jaipur",
+    "generated_for": "Training dataset — mock investigation records",
+    "last_updated": "2026-03-18"
+  },
+  "suspects": [
+    {
+      "id": "S001",
+      "name": "Vikram Malhotra",
+      "alias": "Vicky",
+      "age": 38,
+      "gender": "Male",
+      "phone": "9876543210",
+      "alt_phone": "9876500001",
+      "aadhaar_masked": "XXXX-XXXX-4412",
+      "address": "14, Greater Kailash-I",
+      "city": "New Delhi",
+      "status": "Wanted",
+      "risk": "high",
+      "role": "Organizer",
+      "notes": "Believed to coordinate the Khan Market jewellery heist and move proceeds through hawala contacts in Mumbai.",
+      "known_associates": [
+        "S002",
+        "S003",
+        "S004",
+        "S005",
+        "S006"
+      ],
+      "vehicle_ids": [
+        "V001"
+      ],
+      "fir_ids": [
+        "FIR-2024-DL-4412",
+        "FIR-2025-MH-0088",
+        "FIR-2025-DL-0156"
+      ],
+      "accounts": [
+        "ICICI-4412001122",
+        "vicky.m@okicici"
+      ]
+    },
+    {
+      "id": "S002",
+      "name": "Arjun Singh",
+      "alias": "Driver",
+      "age": 29,
+      "gender": "Male",
+      "phone": "9811122233",
+      "alt_phone": null,
+      "aadhaar_masked": "XXXX-XXXX-2290",
+      "address": "Sector 21, Ballabgarh",
+      "city": "Faridabad",
+      "status": "In custody",
+      "risk": "medium",
+      "role": "Getaway driver",
+      "notes": "Identified on CCTV leaving Khan Market in HR-26-CD-5678. Also linked to a stolen Fortuner recovery.",
+      "known_associates": [
+        "S001",
+        "S005",
+        "S007"
+      ],
+      "vehicle_ids": [
+        "V002"
+      ],
+      "fir_ids": [
+        "FIR-2024-DL-4412",
+        "FIR-2024-DL-3890"
+      ],
+      "accounts": [
+        "SBI-2290883344"
+      ]
+    },
+    {
+      "id": "S003",
+      "name": "Neha Kapoor",
+      "alias": "NK",
+      "age": 26,
+      "gender": "Female",
+      "phone": "9822233344",
+      "alt_phone": "9822200987",
+      "aadhaar_masked": "XXXX-XXXX-7761",
+      "address": "DLF Phase 3, Udyog Vihar",
+      "city": "Gurugram",
+      "status": "Under watch",
+      "risk": "medium",
+      "role": "Money mule",
+      "notes": "Receives layered UPI credits after major jobs, then forwards to Anita Desai and Sameer Khan.",
+      "known_associates": [
+        "S001",
+        "S008",
+        "S006"
+      ],
+      "vehicle_ids": [],
+      "fir_ids": [
+        "FIR-2024-HR-1204",
+        "FIR-2025-DL-0156"
+      ],
+      "accounts": [
+        "HDFC-7761004455",
+        "neha.k@okhdfcbank"
+      ]
+    },
+    {
+      "id": "S004",
+      "name": "Imran Qureshi",
+      "alias": "IQ",
+      "age": 33,
+      "gender": "Male",
+      "phone": "9833344455",
+      "alt_phone": "7003344455",
+      "aadhaar_masked": "XXXX-XXXX-1188",
+      "address": "Jama Masjid, Chitli Qabar",
+      "city": "Old Delhi",
+      "status": "Wanted",
+      "risk": "high",
+      "role": "Communications",
+      "notes": "Runs disposable SIMs. Tower dumps place him near Khan Market 40 minutes before the heist.",
+      "known_associates": [
+        "S001",
+        "S005",
+        "S009"
+      ],
+      "vehicle_ids": [
+        "V005"
+      ],
+      "fir_ids": [
+        "FIR-2025-DL-0156"
+      ],
+      "accounts": [
+        "PAYTM-11880099"
+      ]
+    },
+    {
+      "id": "S005",
+      "name": "Rajesh Yadav",
+      "alias": "Raju",
+      "age": 41,
+      "gender": "Male",
+      "phone": "9844455566",
+      "alt_phone": null,
+      "aadhaar_masked": "XXXX-XXXX-9033",
+      "address": "Sector 62, industrial plot 9",
+      "city": "Noida",
+      "status": "On bail",
+      "risk": "medium",
+      "role": "Lookout / muscle",
+      "notes": "Prior house-breaking record. Phone stayed in constant contact with Vicky on the night of the heist.",
+      "known_associates": [
+        "S001",
+        "S002",
+        "S004"
+      ],
+      "vehicle_ids": [],
+      "fir_ids": [
+        "FIR-2024-DL-4412"
+      ],
+      "accounts": [
+        "PNB-9033442211"
+      ]
+    },
+    {
+      "id": "S006",
+      "name": "Sameer Khan",
+      "alias": "SK",
+      "age": 45,
+      "gender": "Male",
+      "phone": "9855566677",
+      "alt_phone": "9820011455",
+      "aadhaar_masked": "XXXX-XXXX-5570",
+      "address": "Mohammed Ali Road, Grant Road",
+      "city": "Mumbai",
+      "status": "Under watch",
+      "risk": "high",
+      "role": "Hawala operator",
+      "notes": "Receives large NEFT/IMPS bursts from NCR mules. Linked to Kabir Ali for cash-out.",
+      "known_associates": [
+        "S001",
+        "S003",
+        "S009"
+      ],
+      "vehicle_ids": [
+        "V004"
+      ],
+      "fir_ids": [
+        "FIR-2025-MH-0088"
+      ],
+      "accounts": [
+        "AXIS-5570008899",
+        "sameer.k@okaxis"
+      ]
+    },
+    {
+      "id": "S007",
+      "name": "Deepak Verma",
+      "alias": "Fence",
+      "age": 52,
+      "gender": "Male",
+      "phone": "9866677788",
+      "alt_phone": null,
+      "aadhaar_masked": "XXXX-XXXX-3301",
+      "address": "Sahibabad industrial area",
+      "city": "Ghaziabad",
+      "status": "In custody",
+      "risk": "medium",
+      "role": "Vehicle fence",
+      "notes": "Workshop used to re-register stolen SUVs. Fortuner UP-16-EF-9012 recovered from his yard.",
+      "known_associates": [
+        "S002",
+        "S010"
+      ],
+      "vehicle_ids": [
+        "V003"
+      ],
+      "fir_ids": [
+        "FIR-2024-DL-3890"
+      ],
+      "accounts": [
+        "BOB-3301556677"
+      ]
+    },
+    {
+      "id": "S008",
+      "name": "Anita Desai",
+      "alias": "UPI Queen",
+      "age": 24,
+      "gender": "Female",
+      "phone": "9877788899",
+      "alt_phone": null,
+      "aadhaar_masked": "XXXX-XXXX-6124",
+      "address": "Laxmi Nagar, near metro",
+      "city": "East Delhi",
+      "status": "Under watch",
+      "risk": "low",
+      "role": "UPI layering",
+      "notes": "Dozens of small inbound UPI hits, then a single outbound to Mumbai. Claims accounts were 'on rent'.",
+      "known_associates": [
+        "S003"
+      ],
+      "vehicle_ids": [],
+      "fir_ids": [
+        "FIR-2024-HR-1204"
+      ],
+      "accounts": [
+        "KOTAK-6124007788",
+        "anita.d@upi"
+      ]
+    },
+    {
+      "id": "S009",
+      "name": "Kabir Ali",
+      "alias": "KA",
+      "age": 36,
+      "gender": "Male",
+      "phone": "9888899900",
+      "alt_phone": "9920022110",
+      "aadhaar_masked": "XXXX-XXXX-2745",
+      "address": "Dongri, 3rd lane",
+      "city": "Mumbai",
+      "status": "Wanted",
+      "risk": "high",
+      "role": "Cash-out",
+      "notes": "Picks up hawala cash and buys gold. Phone contacts Imran for SIM drops when in Delhi.",
+      "known_associates": [
+        "S006",
+        "S004"
+      ],
+      "vehicle_ids": [],
+      "fir_ids": [
+        "FIR-2025-MH-0088"
+      ],
+      "accounts": [
+        "YES-2745001234"
+      ]
+    },
+    {
+      "id": "S010",
+      "name": "Rohan Mehta",
+      "alias": "RM",
+      "age": 31,
+      "gender": "Male",
+      "phone": "9899900011",
+      "alt_phone": null,
+      "aadhaar_masked": "XXXX-XXXX-8802",
+      "address": "Vaishali Nagar",
+      "city": "Jaipur",
+      "status": "Person of interest",
+      "risk": "low",
+      "role": "Peripheral buyer",
+      "notes": "Paid Deepak Verma for a 'second-hand' Fortuner that matched a Delhi theft FIR.",
+      "known_associates": [
+        "S007"
+      ],
+      "vehicle_ids": [],
+      "fir_ids": [],
+      "accounts": [
+        "ICICI-8802112233"
+      ]
+    },
+    {
+      "name": "Suraj Bhan",
+      "alias": "Bhanu",
+      "role": "Chop Shop Associate",
+      "city": "Ghaziabad",
+      "phone": "9811002233",
+      "status": "Under watch",
+      "risk": "medium",
+      "notes": "Spotted moving number plates.",
+      "id": "S011"
+    }
+  ],
+  "firs": [
+    {
+      "id": "FIR-2024-DL-4412",
+      "date": "2024-11-02",
+      "police_station": "Khan Market PS",
+      "district": "New Delhi",
+      "sections": [
+        "394 IPC",
+        "397 IPC",
+        "120B IPC"
+      ],
+      "offense": "Armed robbery — jewellery showroom",
+      "complainant": "Meera Sethi, Sethi Jewellers",
+      "accused_ids": [
+        "S001",
+        "S002",
+        "S005"
+      ],
+      "status": "Chargesheet filed",
+      "location": "Khan Market, Shop 11-B",
+      "loss_estimate_inr": 18400000,
+      "summary": "Three masked persons entered Sethi Jewellers at 20:12. Gold ornaments worth ~1.84 Cr taken. Getaway vehicle HR-26-CD-5678 captured on traffic cam toward Ring Road."
+    },
+    {
+      "id": "FIR-2024-DL-3890",
+      "date": "2024-09-14",
+      "police_station": "Timarpur PS",
+      "district": "North Delhi",
+      "sections": [
+        "379 IPC",
+        "411 IPC"
+      ],
+      "offense": "Vehicle theft and receiving stolen property",
+      "complainant": "Col. Ashok Bhandari (Retd.)",
+      "accused_ids": [
+        "S007",
+        "S002"
+      ],
+      "status": "Under investigation",
+      "location": "Mall Road, Timarpur",
+      "loss_estimate_inr": 4200000,
+      "summary": "Toyota Fortuner UP-16-EF-9012 stolen overnight. Recovered from Deepak Verma's Ghaziabad workshop with altered plates. Arjun Singh's fingerprint on the jack."
+    },
+    {
+      "id": "FIR-2024-HR-1204",
+      "date": "2024-12-19",
+      "police_station": "Udyog Vihar PS",
+      "district": "Gurugram",
+      "sections": [
+        "420 IPC",
+        "66C IT Act"
+      ],
+      "offense": "Cheating and identity theft (UPI mule network)",
+      "complainant": "Cyber Cell, Gurugram",
+      "accused_ids": [
+        "S003",
+        "S008"
+      ],
+      "status": "Under investigation",
+      "location": "Udyog Vihar Phase 3",
+      "loss_estimate_inr": 2750000,
+      "summary": "Complaints of unauthorised UPI collections funnelled through Neha Kapoor and Anita Desai, then forwarded to Mumbai accounts."
+    },
+    {
+      "id": "FIR-2025-MH-0088",
+      "date": "2025-01-22",
+      "police_station": "Dongri PS",
+      "district": "Mumbai City",
+      "sections": [
+        "Hawala — FEMA / PMLA predicate",
+        "120B IPC"
+      ],
+      "offense": "Hawala and proceeds of crime",
+      "complainant": "ED / local police joint reference",
+      "accused_ids": [
+        "S006",
+        "S009",
+        "S001"
+      ],
+      "status": "Open",
+      "location": "Grant Road / Dongri",
+      "loss_estimate_inr": 9100000,
+      "summary": "Cash movement matching jewellery-heist proceeds. Sameer Khan received IMPS from NCR; Kabir Ali arranged gold purchases within 48 hours."
+    },
+    {
+      "id": "FIR-2025-DL-0156",
+      "date": "2025-02-08",
+      "police_station": "Special Cell, Lodhi Colony",
+      "district": "New Delhi",
+      "sections": [
+        "120B IPC",
+        "201 IPC"
+      ],
+      "offense": "Criminal conspiracy and destruction of evidence",
+      "complainant": "Special Cell, Delhi Police",
+      "accused_ids": [
+        "S001",
+        "S004",
+        "S003"
+      ],
+      "status": "Open",
+      "location": "Lodhi Colony / multiple towers",
+      "loss_estimate_inr": 0,
+      "summary": "Post-heist coordination: burner SIMs issued by Imran Qureshi, fund layering instructions to Neha Kapoor, and a meet with Vikram Malhotra at GK-I."
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "V001",
+      "registration": "DL-01-AB-1234",
+      "type": "Sedan",
+      "make": "BMW",
+      "model": "5 Series",
+      "color": "Black",
+      "owner_id": "S001",
+      "status": "Impounded",
+      "last_seen": "2024-11-03T01:40:00+05:30",
+      "last_seen_location": "Greater Kailash-I, New Delhi",
+      "notes": "Registered to Vikram Malhotra. Not the heist getaway, but used the same night toward Lodhi Road."
+    },
+    {
+      "id": "V002",
+      "registration": "HR-26-CD-5678",
+      "type": "Hatchback",
+      "make": "Maruti",
+      "model": "Swift",
+      "color": "White",
+      "owner_id": "S002",
+      "status": "Seized",
+      "last_seen": "2024-11-02T20:28:00+05:30",
+      "last_seen_location": "Ring Road, near AIIMS flyover",
+      "notes": "Primary getaway vehicle in FIR-2024-DL-4412. Fake commercial permit sticker."
+    },
+    {
+      "id": "V003",
+      "registration": "UP-16-EF-9012",
+      "type": "SUV",
+      "make": "Toyota",
+      "model": "Fortuner",
+      "color": "Pearl White",
+      "owner_id": "S007",
+      "status": "Recovered — stolen",
+      "last_seen": "2024-09-20T11:15:00+05:30",
+      "last_seen_location": "Sahibabad workshop, Ghaziabad",
+      "notes": "Original owner Col. Bhandari. Chassis intact; plates swapped. Linked to S010 attempted purchase."
+    },
+    {
+      "id": "V004",
+      "registration": "MH-02-GH-3456",
+      "type": "MPV",
+      "make": "Toyota",
+      "model": "Innova Crysta",
+      "color": "Grey",
+      "owner_id": "S006",
+      "status": "On watchlist",
+      "last_seen": "2025-01-23T18:05:00+05:30",
+      "last_seen_location": "Mohammed Ali Road, Mumbai",
+      "notes": "Used to move Kabir Ali after a gold-market visit in Zaveri Bazaar."
+    },
+    {
+      "id": "V005",
+      "registration": "DL-03-IJ-7890",
+      "type": "Scooter",
+      "make": "Honda",
+      "model": "Activa 6G",
+      "color": "Blue",
+      "owner_id": "S004",
+      "status": "Untraced",
+      "last_seen": "2024-11-02T19:32:00+05:30",
+      "last_seen_location": "Khan Market outer circle",
+      "notes": "Tower + ANPR ping shortly before the robbery. Possible recce vehicle."
+    }
+  ],
+  "calls": [
+    {
+      "id": "C001",
+      "from_phone": "9876543210",
+      "to_phone": "9811122233",
+      "from_suspect": "S001",
+      "to_suspect": "S002",
+      "timestamp": "2024-11-02T18:05:00+05:30",
+      "duration_sec": 94,
+      "type": "outgoing",
+      "tower": "Khan Market / Lodhi Road",
+      "imei": "356938035643809"
+    },
+    {
+      "id": "C002",
+      "from_phone": "9876543210",
+      "to_phone": "9844455566",
+      "from_suspect": "S001",
+      "to_suspect": "S005",
+      "timestamp": "2024-11-02T18:07:12+05:30",
+      "duration_sec": 41,
+      "type": "outgoing",
+      "tower": "Khan Market / Lodhi Road",
+      "imei": "356938035643809"
+    },
+    {
+      "id": "C003",
+      "from_phone": "9833344455",
+      "to_phone": "9876543210",
+      "from_suspect": "S004",
+      "to_suspect": "S001",
+      "timestamp": "2024-11-02T19:21:00+05:30",
+      "duration_sec": 22,
+      "type": "outgoing",
+      "tower": "Jama Masjid",
+      "imei": "869088030112233"
+    },
+    {
+      "id": "C004",
+      "from_phone": "9811122233",
+      "to_phone": "9844455566",
+      "from_suspect": "S002",
+      "to_suspect": "S005",
+      "timestamp": "2024-11-02T19:58:40+05:30",
+      "duration_sec": 18,
+      "type": "outgoing",
+      "tower": "Khan Market outer circle",
+      "imei": "352099001122334"
+    },
+    {
+      "id": "C005",
+      "from_phone": "9876543210",
+      "to_phone": "9822233344",
+      "from_suspect": "S001",
+      "to_suspect": "S003",
+      "timestamp": "2024-11-02T21:40:00+05:30",
+      "duration_sec": 130,
+      "type": "outgoing",
+      "tower": "Greater Kailash-I",
+      "imei": "356938035643809"
+    },
+    {
+      "id": "C006",
+      "from_phone": "9822233344",
+      "to_phone": "9877788899",
+      "from_suspect": "S003",
+      "to_suspect": "S008",
+      "timestamp": "2024-11-03T09:12:00+05:30",
+      "duration_sec": 76,
+      "type": "outgoing",
+      "tower": "Udyog Vihar",
+      "imei": "358240051111000"
+    },
+    {
+      "id": "C007",
+      "from_phone": "9822233344",
+      "to_phone": "9855566677",
+      "from_suspect": "S003",
+      "to_suspect": "S006",
+      "timestamp": "2024-11-03T11:04:00+05:30",
+      "duration_sec": 201,
+      "type": "outgoing",
+      "tower": "Udyog Vihar",
+      "imei": "358240051111000"
+    },
+    {
+      "id": "C008",
+      "from_phone": "9855566677",
+      "to_phone": "9888899900",
+      "from_suspect": "S006",
+      "to_suspect": "S009",
+      "timestamp": "2024-11-03T16:22:00+05:30",
+      "duration_sec": 88,
+      "type": "outgoing",
+      "tower": "Grant Road, Mumbai",
+      "imei": "353325001998877"
+    },
+    {
+      "id": "C009",
+      "from_phone": "9866677788",
+      "to_phone": "9811122233",
+      "from_suspect": "S007",
+      "to_suspect": "S002",
+      "timestamp": "2024-09-18T14:10:00+05:30",
+      "duration_sec": 312,
+      "type": "outgoing",
+      "tower": "Sahibabad",
+      "imei": "356789012345671"
+    },
+    {
+      "id": "C010",
+      "from_phone": "9899900011",
+      "to_phone": "9866677788",
+      "from_suspect": "S010",
+      "to_suspect": "S007",
+      "timestamp": "2024-09-21T17:45:00+05:30",
+      "duration_sec": 540,
+      "type": "outgoing",
+      "tower": "Vaishali Nagar, Jaipur",
+      "imei": "359876543210098"
+    },
+    {
+      "id": "C011",
+      "from_phone": "9888899900",
+      "to_phone": "9833344455",
+      "from_suspect": "S009",
+      "to_suspect": "S004",
+      "timestamp": "2025-01-20T13:01:00+05:30",
+      "duration_sec": 45,
+      "type": "outgoing",
+      "tower": "Dongri, Mumbai",
+      "imei": "354400998877665"
+    },
+    {
+      "id": "C012",
+      "from_phone": "9876543210",
+      "to_phone": "9855566677",
+      "from_suspect": "S001",
+      "to_suspect": "S006",
+      "timestamp": "2025-01-21T20:18:00+05:30",
+      "duration_sec": 260,
+      "type": "outgoing",
+      "tower": "Greater Kailash-I",
+      "imei": "356938035643809"
+    },
+    {
+      "id": "C013",
+      "from_phone": "9833344455",
+      "to_phone": "7000001122",
+      "from_suspect": "S004",
+      "to_suspect": null,
+      "timestamp": "2024-11-01T22:11:00+05:30",
+      "duration_sec": 12,
+      "type": "outgoing",
+      "tower": "Chitli Qabar",
+      "imei": "869088030112233"
+    },
+    {
+      "id": "C014",
+      "from_phone": "9844455566",
+      "to_phone": "9833344455",
+      "from_suspect": "S005",
+      "to_suspect": "S004",
+      "timestamp": "2024-11-02T17:40:00+05:30",
+      "duration_sec": 33,
+      "type": "outgoing",
+      "tower": "Sector 62, Noida",
+      "imei": "351234098765432"
+    },
+    {
+      "id": "C015",
+      "from_phone": "9877788899",
+      "to_phone": "9822233344",
+      "from_suspect": "S008",
+      "to_suspect": "S003",
+      "timestamp": "2024-12-18T19:02:00+05:30",
+      "duration_sec": 67,
+      "type": "outgoing",
+      "tower": "Laxmi Nagar",
+      "imei": "358800112233445"
+    },
+    {
+      "id": "C016",
+      "from_phone": "9811122233",
+      "to_phone": "9876543210",
+      "from_suspect": "S002",
+      "to_suspect": "S001",
+      "timestamp": "2024-11-02T20:31:00+05:30",
+      "duration_sec": 8,
+      "type": "outgoing",
+      "tower": "AIIMS / Ring Road",
+      "imei": "352099001122334"
+    },
+    {
+      "id": "C017",
+      "from_phone": "9855566677",
+      "to_phone": "9876543210",
+      "from_suspect": "S006",
+      "to_suspect": "S001",
+      "timestamp": "2025-02-07T23:50:00+05:30",
+      "duration_sec": 19,
+      "type": "missed",
+      "tower": "Grant Road, Mumbai",
+      "imei": "353325001998877"
+    },
+    {
+      "id": "C018",
+      "from_phone": "9822233344",
+      "to_phone": "9876543210",
+      "from_suspect": "S003",
+      "to_suspect": "S001",
+      "timestamp": "2025-02-08T08:15:00+05:30",
+      "duration_sec": 154,
+      "type": "outgoing",
+      "tower": "Udyog Vihar",
+      "imei": "358240051111000"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "T001",
+      "from_account": "ICICI-4412001122",
+      "to_account": "HDFC-7761004455",
+      "from_suspect": "S001",
+      "to_suspect": "S003",
+      "amount_inr": 450000,
+      "timestamp": "2024-11-03T10:05:00+05:30",
+      "mode": "IMPS",
+      "channel": "bank",
+      "narration": "CONSULT FEE",
+      "fir_ids": [
+        "FIR-2024-DL-4412",
+        "FIR-2025-DL-0156"
+      ]
+    },
+    {
+      "id": "T002",
+      "from_account": "HDFC-7761004455",
+      "to_account": "KOTAK-6124007788",
+      "from_suspect": "S003",
+      "to_suspect": "S008",
+      "amount_inr": 275000,
+      "timestamp": "2024-11-03T10:22:00+05:30",
+      "mode": "UPI",
+      "channel": "neha.k@okhdfcbank → anita.d@upi",
+      "narration": "RENT",
+      "fir_ids": [
+        "FIR-2024-HR-1204"
+      ]
+    },
+    {
+      "id": "T003",
+      "from_account": "KOTAK-6124007788",
+      "to_account": "AXIS-5570008899",
+      "from_suspect": "S008",
+      "to_suspect": "S006",
+      "amount_inr": 268000,
+      "timestamp": "2024-11-03T18:40:00+05:30",
+      "mode": "NEFT",
+      "channel": "bank",
+      "narration": "GOODS",
+      "fir_ids": [
+        "FIR-2024-HR-1204",
+        "FIR-2025-MH-0088"
+      ]
+    },
+    {
+      "id": "T004",
+      "from_account": "SBI-2290883344",
+      "to_account": "BOB-3301556677",
+      "from_suspect": "S002",
+      "to_suspect": "S007",
+      "amount_inr": 85000,
+      "timestamp": "2024-09-16T12:00:00+05:30",
+      "mode": "UPI",
+      "channel": "phone",
+      "narration": "WORKSHOP",
+      "fir_ids": [
+        "FIR-2024-DL-3890"
+      ]
+    },
+    {
+      "id": "T005",
+      "from_account": "ICICI-8802112233",
+      "to_account": "BOB-3301556677",
+      "from_suspect": "S010",
+      "to_suspect": "S007",
+      "amount_inr": 900000,
+      "timestamp": "2024-09-22T11:30:00+05:30",
+      "mode": "RTGS",
+      "channel": "bank",
+      "narration": "VEHICLE ADVANCE",
+      "fir_ids": [
+        "FIR-2024-DL-3890"
+      ]
+    },
+    {
+      "id": "T006",
+      "from_account": "AXIS-5570008899",
+      "to_account": "YES-2745001234",
+      "from_suspect": "S006",
+      "to_suspect": "S009",
+      "amount_inr": 2100000,
+      "timestamp": "2025-01-22T09:18:00+05:30",
+      "mode": "IMPS",
+      "channel": "bank",
+      "narration": "SETTLEMENT",
+      "fir_ids": [
+        "FIR-2025-MH-0088"
+      ]
+    },
+    {
+      "id": "T007",
+      "from_account": "PNB-9033442211",
+      "to_account": "CASH-OUT",
+      "from_suspect": "S005",
+      "to_suspect": null,
+      "amount_inr": 40000,
+      "timestamp": "2024-11-02T16:10:00+05:30",
+      "mode": "ATM",
+      "channel": "Noida Sec 62 ATM",
+      "narration": "CASH",
+      "fir_ids": [
+        "FIR-2024-DL-4412"
+      ]
+    },
+    {
+      "id": "T008",
+      "from_account": "PAYTM-11880099",
+      "to_account": "vicky.m@okicici",
+      "from_suspect": "S004",
+      "to_suspect": "S001",
+      "amount_inr": 15000,
+      "timestamp": "2024-11-01T21:05:00+05:30",
+      "mode": "UPI",
+      "channel": "wallet",
+      "narration": "SIM LOT",
+      "fir_ids": [
+        "FIR-2025-DL-0156"
+      ]
+    },
+    {
+      "id": "T009",
+      "from_account": "HDFC-7761004455",
+      "to_account": "AXIS-5570008899",
+      "from_suspect": "S003",
+      "to_suspect": "S006",
+      "amount_inr": 1200000,
+      "timestamp": "2024-12-20T14:44:00+05:30",
+      "mode": "IMPS",
+      "channel": "bank",
+      "narration": "EXPORT",
+      "fir_ids": [
+        "FIR-2024-HR-1204",
+        "FIR-2025-MH-0088"
+      ]
+    },
+    {
+      "id": "T010",
+      "from_account": "ICICI-4412001122",
+      "to_account": "CASH-HAWALA",
+      "from_suspect": "S001",
+      "to_suspect": "S006",
+      "amount_inr": 3500000,
+      "timestamp": "2025-01-21T19:00:00+05:30",
+      "mode": "Hawala",
+      "channel": "informal",
+      "narration": "HAND CARRY REF SK",
+      "fir_ids": [
+        "FIR-2025-MH-0088"
+      ]
+    },
+    {
+      "id": "T011",
+      "from_account": "neha.k@okhdfcbank",
+      "to_account": "anita.d@upi",
+      "from_suspect": "S003",
+      "to_suspect": "S008",
+      "amount_inr": 49000,
+      "timestamp": "2024-12-19T08:02:00+05:30",
+      "mode": "UPI",
+      "channel": "upi",
+      "narration": "GROCERY",
+      "fir_ids": [
+        "FIR-2024-HR-1204"
+      ]
+    },
+    {
+      "id": "T012",
+      "from_account": "YES-2745001234",
+      "to_account": "CASH-OUT",
+      "from_suspect": "S009",
+      "to_suspect": null,
+      "amount_inr": 1800000,
+      "timestamp": "2025-01-23T16:30:00+05:30",
+      "mode": "Cash",
+      "channel": "Zaveri Bazaar gold desk",
+      "narration": "GOLD PURCHASE",
+      "fir_ids": [
+        "FIR-2025-MH-0088"
+      ]
+    }
+  ]
+}
