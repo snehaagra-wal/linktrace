@@ -20,7 +20,7 @@
 </div>
 
 ---
-
+Direct Link - https://linktrace-kappa.vercel.app/
 ## 📌 Project Overview (Yeh Project Kya Karta Hai?)
 
 **LinkTrace** is a next-generation **Law Enforcement Intelligence & Criminal Link Analysis Platform** designed to assist police departments and investigative agencies in solving complex, inter-state organized crime syndicates. 
